@@ -20,7 +20,6 @@ namespace M2000D.carto
 		private MainMenu mainMenu;
 		private Wrapper tacview;
 		private Wrapper.TelemetryClass telemetry;
-		private Thread getLayerListThread;
 		private Wms wms;
 		private Process process;
 
@@ -92,10 +91,6 @@ namespace M2000D.carto
 			{
 				this.wms.StopDownloadService();
 				wms = null;
-			}
-			if (this.getLayerListThread != null)
-			{
-				this.getLayerListThread.Abort();
 			}
 
 			stopEsiocServer();
