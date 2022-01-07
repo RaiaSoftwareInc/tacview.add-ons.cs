@@ -33,7 +33,27 @@ usertype.dat text eol=crlf
 # The following files will be considered as large binary files.
 # To save space, they will not have the usual history/diff available
 
+*.bin filter=lfs diff=lfs merge=lfs binary
+*.dat filter=lfs diff=lfs merge=lfs binary
+*.ddNSi filter=lfs diff=lfs merge=lfs binary
+*.dll filter=lfs diff=lfs merge=lfs binary
+*.exe filter=lfs diff=lfs merge=lfs binary
 *.gif filter=lfs diff=lfs merge=lfs binary
+*.ico filter=lfs diff=lfs merge=lfs binary
+*.jar filter=lfs diff=lfs merge=lfs binary
 *.jpg filter=lfs diff=lfs merge=lfs binary
+*.lib filter=lfs diff=lfs merge=lfs binary
+*.mo filter=lfs diff=lfs merge=lfs binary
+*.obj filter=lfs diff=lfs merge=lfs binary
+*.pdb filter=lfs diff=lfs merge=lfs binary
 *.png filter=lfs diff=lfs merge=lfs binary
+*.spirv filter=lfs diff=lfs merge=lfs binary
+*.spv filter=lfs diff=lfs merge=lfs binary
+*.srtm filter=lfs diff=lfs merge=lfs binary
 *.wav filter=lfs diff=lfs merge=lfs binary
+*.webp filter=lfs diff=lfs merge=lfs binary
+*.xlsx filter=lfs diff=lfs merge=lfs binary
+
+XPLM filter=lfs diff=lfs merge=lfs binary
+XPWidgets filter=lfs diff=lfs merge=lfs binary
+
