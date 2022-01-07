@@ -43,7 +43,7 @@ BEGIN
 			VALUE "FileDescription",	"Tacview - C# API Wrapper"
 			VALUE "FileVersion",		"1.8.8.101"
 			VALUE "InternalName",		"Tacview"
-			VALUE "LegalCopyright",		"Copyright (c) 2018-2021 Raia Software Inc. All rights reserved."
+			VALUE "LegalCopyright",		"Copyright (c) 2018-2022 Raia Software Inc. All rights reserved."
 			VALUE "OriginalFilename",	"Tacview.Wrapper.Windows.dll"
 			VALUE "ProductName",		"Tacview"
 			VALUE "ProductVersion",		"1.8.8.101"

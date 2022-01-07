@@ -16,7 +16,7 @@ using namespace System::Reflection;
 // Assembly attributes
 
 [assembly:AssemblyTitleAttribute("Tacview.Wrapper")];
-[assembly:AssemblyCopyrightAttribute("Copyright © 2018-2021 Raia Software Inc.")];
+[assembly:AssemblyCopyrightAttribute("Copyright © 2018-2022 Raia Software Inc.")];
 [assembly:AssemblyDescriptionAttribute(".Net DLL wrapper for Tacview API")];
 [assembly:AssemblyProductAttribute("Tacview")];
 [assembly:AssemblyVersionAttribute("1.8.8.101")];
