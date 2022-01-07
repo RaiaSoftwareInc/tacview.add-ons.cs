@@ -123,12 +123,15 @@ namespace M2000D.carto
 
 			foreach (XElement p in found)
 			{
-				service += (string)p.Element(ns + "Name") + ";";
-				title += (string)p.Element(ns + "Title") + ";";
-			}
+				if (!String.IsNullOrWhiteSpace(service))
+				{
+					service += ';';
+					title += ';';
+				}
 
-			if (service.Count() > 0)
-				service.Remove(service.Length - 1);
+				service += (string)p.Element(ns + "Name");
+				title += (string)p.Element(ns + "Title");
+			}
 
 			this.layers = service.Split(';');
 
