@@ -62,6 +62,7 @@ namespace M2000D.carto
 							 //this.Hide(); // it'll hide the window
 							 // here now you can call any method
 		}
+
 		internal void setParent(MainMenu mainMenu)
 		{
 			this.mainMenu = mainMenu;
@@ -70,14 +71,14 @@ namespace M2000D.carto
 			string urlOfSelectedServer = this.mainMenu.ogcServerList[this.mainMenu.selectedServer];
 			this.wms = new Wms(tacview, urlOfSelectedServer, this);
 		}
+
 		private void Ok_Click(object sender, RoutedEventArgs e)
 		{
 			DownloadMap();
 		}
 		private void Cancel_Click(object sender, RoutedEventArgs e)
 		{
-
-			this.closeWindows();
+			closeWindows();
 		}
 		void ClosingEvent(object sender, System.ComponentModel.CancelEventArgs e)
 		{
@@ -85,12 +86,13 @@ namespace M2000D.carto
 		}
 		public void closeWindows()
 		{
-			tacview.Log.Info("Reload Maps");
+			tacview.Log.Info("Reloading terrain.");
+
 			LoadMaps();
+
 			if (this.wms != null)
 			{
 				this.wms.StopDownloadService();
-				wms = null;
 			}
 
 			stopEsiocServer();
@@ -173,6 +175,7 @@ namespace M2000D.carto
 				resolution = Convert.ToDouble(comboboxResolution.SelectedItem);
 			}
 			catch { }
+
 			this.wms.DownloadService(ListboxMaps.SelectedItems, topLeftLatitude, topLeftLongitude, bottomRightLatitude, bottomRightLongitude, resolution);
 		}
 		private void GetCoordinatesFromCamera(out double topLeftLatitude, out double topLeftLongitude, out double bottomRightLatitude, out double bottomRightLongitude)
