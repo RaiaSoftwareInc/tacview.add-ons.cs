@@ -2,29 +2,27 @@
 
 namespace M2000D.carto
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.Specialized;
-    using System.Drawing;
-    using System.Drawing.Drawing2D;
-    using System.Drawing.Imaging;
-    using System.IO;
-    using System.Linq;
-    using System.Net;
-    using System.Net.Http;
-    using System.Text;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using TacviewSDK;
-    using System.Windows.Controls;
-    using Image = System.Drawing.Image;
-    using System.Web;
-    using System.Collections;
-    using System.Xml.Linq;
-    using Maps_Downloader.carto;
-    using System.Windows;
+	using Maps_Downloader.carto;
+	using System;
+	using System.Collections;
+	using System.Collections.Generic;
+	using System.Collections.Specialized;
+	using System.Drawing;
+	using System.Drawing.Drawing2D;
+	using System.Drawing.Imaging;
+	using System.IO;
+	using System.Linq;
+	using System.Net;
+	using System.Net.Http;
+	using System.Threading;
+	using System.Threading.Tasks;
+	using System.Web;
+	using System.Windows.Controls;
+	using System.Xml.Linq;
+	using TacviewSDK;
+	using Image = System.Drawing.Image;
 
-    class Wms
+	class Wms
     {
         private TacviewSDK.Wrapper tacview;
         private static long titlesTotal;
@@ -228,9 +226,6 @@ namespace M2000D.carto
 
                     Parallel.ForEach(cols, new ParallelOptions { MaxDegreeOfParallelism = Settings.DegreeOfParallelism }, x =>
                     {
-                        double ratio = 0;
-
-
                         foreach (double y in rows)
                         {
 
