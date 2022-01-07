@@ -66,7 +66,7 @@ namespace M2000D.carto
 		{
 			if (this.getLayerListThread != null)
 			{
-				this.getLayerListThread.Abort();
+				this.getLayerListThread.Join();
 				this.getLayerListThread = null;
 			}
 		}
@@ -74,18 +74,24 @@ namespace M2000D.carto
 		private void GetCapabilities()
 		{
 			HttpClient client = new HttpClient();
+
 			//Pour pouvoir telecharger sur geoportail
+
 			client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (compatible; AcmeInc/1.0)");
 			string url = this.urlOfSelectedServer + "?REQUEST=GetCapabilities&SERVICE=WMS";
+
 			if (this.urlOfSelectedServer.Contains("wmts"))
+			{
 				url = this.urlOfSelectedServer + "?REQUEST=GetCapabilities&SERVICE=WMTS";
+			}
 
 			//specify to use TLS 1.2 as default connection
+
 			if (url.Contains("https"))
 			{
 				System.Net.ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
-
 			}
+
 			HttpResponseMessage response;
 			string capabilitiesXml = "";
 
@@ -105,7 +111,8 @@ namespace M2000D.carto
 					tacview.Log.Error(e.ToString());
 					Thread.Sleep(1000);
 				}
-			} while (capabilitiesXml.Length <= 0);
+			}
+			while (capabilitiesXml.Length <= 0);
 
 			XDocument xdoc = XDocument.Parse(capabilitiesXml);
 			XNamespace ns = xdoc.Root.Name.Namespace;
@@ -113,13 +120,16 @@ namespace M2000D.carto
 			IEnumerable<XElement> found = xdoc.Descendants(ns + "Capability").Elements(ns + "Layer").Elements(ns + "Layer");
 			string service = "";
 			string title = "";
+
 			foreach (XElement p in found)
 			{
 				service += (string)p.Element(ns + "Name") + ";";
 				title += (string)p.Element(ns + "Title") + ";";
 			}
+
 			if (service.Count() > 0)
 				service.Remove(service.Length - 1);
+
 			this.layers = service.Split(';');
 
 			foreach (string layer in this.layers)
@@ -129,6 +139,7 @@ namespace M2000D.carto
 					this.downloadMaps.ListboxMaps.Items.Add(layer);
 				});
 			}
+
 			IEnumerable<XElement> foundSrsCrs;
 			switch (this.Version)
 			{
@@ -145,7 +156,9 @@ namespace M2000D.carto
 			foreach (string srsCrs in foundSrsCrs)
 			{
 				if (!this.listSrsCrs.Contains(srsCrs))
+				{
 					this.listSrsCrs.Add(srsCrs);
+				}
 			}
 
 			if (this.listSrsCrs.Contains("CRS:84"))
@@ -155,18 +168,17 @@ namespace M2000D.carto
 			else
 			{
 				if (this.listSrsCrs.Count > 0)
+				{
 					this.SrsCrs = this.listSrsCrs.First();
+				}
 			}
 		}
-
-
-
-
 
 		public void DownloadService(IList selectedItems, double topLeftLatitude, double topLeftLongitude, double bottomRightLatitude, double bottomRightLongitude)
 		{
 			DownloadService(selectedItems, topLeftLatitude, topLeftLongitude, bottomRightLatitude, bottomRightLongitude, 0.1);
 		}
+
 		public void DownloadService(IList selectedItems, double topLeftLatitude, double topLeftLongitude, double bottomRightLatitude, double bottomRightLongitude, double resolution)
 		{
 			this.selectedItems = selectedItems;
