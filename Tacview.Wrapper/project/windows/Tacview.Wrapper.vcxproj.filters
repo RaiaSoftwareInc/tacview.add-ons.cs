@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{8C63AEB7-1B13-49AB-B2DB-FDA324025B13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{2c4223f5-f3b8-4377-be86-ee3a3c496b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Wrapper">
+      <UniqueIdentifier>{e11e399b-b1b6-43a0-831a-0f9e9fee23b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SDK Interface">
+      <UniqueIdentifier>{ee74db75-ea14-43df-8c5e-d5715fa303ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Resources">
+      <UniqueIdentifier>{13ac0115-e564-43a2-86b9-5596c125dd15}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Tacview.SDK.Interface.h">
+      <Filter>src\SDK Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Tacview.Wrapper.Headers.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Tacview.Wrapper.h">
+      <Filter>src\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Tacview.Wrapper.Resources.h">
+      <Filter>src\Resources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Headers.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.AddOns.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Log.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Telemetry.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Context.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Events.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Math.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Settings.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.StaticObjects.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.UI.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Terrain.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Database.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.SoundPlayer.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Media.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.String.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Directory.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tacview.Wrapper.Path.cpp">
+      <Filter>src\Wrapper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\Tacview.Wrapper.Resources.rc">
+      <Filter>src\Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

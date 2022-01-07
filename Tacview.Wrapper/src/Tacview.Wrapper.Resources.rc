@@ -1,0 +1,59 @@
+/*
+	Tacview.Wrapper
+	Tacview API wrapper
+	Version 1.8.3 // 2020-02-24
+	Copyright (C) 2018-2021 Raia Software. All rights reserved.
+*/
+
+// Headers
+
+#include <Windows.h>
+#include "Tacview.Wrapper.Resources.h"
+
+// All resources are provided in UTF-8
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(65001)
+
+// Version info
+
+VERSION_INFO_ID VERSIONINFO
+
+FILEVERSION 1,8,8,101
+PRODUCTVERSION 1,8,8,101
+
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+
+#ifdef _DEBUG
+	FILEFLAGS VS_FF_DEBUG
+#else
+	FILEFLAGS 0
+#endif
+
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_DLL
+FILESUBTYPE 0
+
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+		BLOCK "040904B0"		// U.S. English in unicode
+		BEGIN
+			VALUE "CompanyName",		"Raia Software Inc."
+			VALUE "FileDescription",	"Tacview - C# API Wrapper"
+			VALUE "FileVersion",		"1.8.8.101"
+			VALUE "InternalName",		"Tacview"
+			VALUE "LegalCopyright",		"Copyright (c) 2018-2021 Raia Software Inc. All rights reserved."
+			VALUE "OriginalFilename",	"Tacview.Wrapper.Windows.dll"
+			VALUE "ProductName",		"Tacview"
+			VALUE "ProductVersion",		"1.8.8.101"
+		END
+    END
+
+	// Neutral language in UTF-8
+
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x0000, 65001
+	END
+END
