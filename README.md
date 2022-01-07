@@ -20,7 +20,7 @@ This should generate the proper executable DLLs in sub folder(s) of:
 
 ## How to develop my own add-on?
 
-This repository is dedicated to C# add-ons. You need Tacview Enterprise to run C# addons.
+This repository is dedicated to C# add-ons. You need [Tacview Enterprise](https://www.tacview.net/features/enterprise/) to run C# addons.
 
 The C# API is virtually identical the Lua one which is described in detail in:
 
@@ -35,4 +35,4 @@ If you want to publish your creation or changes, contact us at support@tacview.n
 
 ### Cartography
 
-* [Maps Downloader](Maps Downloader) – Downloads and displays topographic and satellite maps from any WMS compliant server such as https://www.geoportail.gouv.fr/
+* [Maps Downloader](MapsDownloader) – Downloads and displays topographic and satellite maps from any WMS compliant server such as https://www.geoportail.gouv.fr/
