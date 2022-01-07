@@ -8,7 +8,7 @@ You will find here numerous samples and tools for Tacview. Feel free to experime
 
 The simplest way to install one of this addons is to download the whole repository in the folder of you choice.
 
-Open the master solution called CS-AddOns.sln
+Open the master solution called [CS-AddOns.sln](CS-AddOns.sln)
 
 Then build the addon of your choice.
 
