@@ -1,0 +1,28 @@
+﻿<Window x:Class="M2000D.carto.SelectOgcServer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:M2000D"
+        mc:Ignorable="d"
+        Title="SelectOgcServer" 
+        Style="{DynamicResource CustomToolWindowStyle}" Height="150.5" Width="500"
+        >
+
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Themes/LightTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Width="75" Margin="15,0,0,15" Click="Cancel_Click" Height="20" VerticalAlignment="Bottom"/>
+        <Button Content="OK" Margin="0,0,15,15" HorizontalAlignment="Right" Width="75" Click="Ok_Click" Height="20" VerticalAlignment="Bottom"/>
+        <ComboBox x:Name="serverNameCombobox" Margin="116,13,35,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
