@@ -185,10 +185,15 @@ namespace M2000D.carto
                 string[] serverListArray = serverList.Split(';');
                 foreach (string serverNameAdresse in serverListArray)
                 {
-                    string[] server = serverNameAdresse.Split(',');
-                    this.ogcServerList.Add(server[0], server[1]);
-                }
-            }
+					serverNameAdresse.Trim();
+					string[] server = serverNameAdresse.Split(',');
+
+					if (server.Length == 2)
+					{
+						this.ogcServerList.Add(server[0], server[1]);
+					}
+				}
+			}
         }
 
         internal void settingsSaveSelectedServer(string selectedServer)
